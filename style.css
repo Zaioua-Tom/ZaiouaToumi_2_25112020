@@ -4,101 +4,232 @@
 {
     margin:0px;
     padding :0px;
-    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+    font-family: 'Raleway', Arial, sans-serif; 
+    text-decoration: none; 
 }
 
-body
-{
+
+/*Header*/
+
+header 
+  {
     display: grid;
     align-items: center;
     max-width: 1500px;
     margin: auto;
-    
-}
+    grid-template-columns: auto 1fr auto auto;
+    grid-template-areas: "logo . navbar inscrire"
+  }
 
+.website_logo
+  {
+    grid-area: logo;
+    padding: 0 40px;
+  } 
 
+.navigation
+  {
+    grid-area: navbar;
+    display: flex;   
+  } 
 
-  /*Header*/
-
-  header
-{
-    display: flex;
-    justify-content: space-between;
-
-    
-     
-
-     
-}
- 
-.navigation 
-{
-	display: flex;
-  	justify-content: flex-end;
-  	align-content: center;
-  	margin: 0;
- 	padding: 0;
-  	flex: 1;
-    list-style: none;  
-    
-}
-
-.inscription
-{
-    color: #0065fc;
-    font-weight: bold;
- 
-}
-
-nav ul li a 
-{
-    text-decoration: none;
+.nav_title 
+  {
+    padding: 40px;
+    text-align: center;
     color: black;
-}
+    font-weight: 500;
+  } 
+.nav_title:hover
+  {
+    color: #0065FC;
+    border-top:3px solid;
+  }
+.inscription 
+  {
+    grid-area: inscrire;
+    display: flex;
+    padding: 40px;
+    color: #0065FC;
+    font-weight: 700; 
+  }
 
-li
-{
-    padding: 1em 1em;
-    margin: 2em 1em;
-      
-}
-header figure
-{
-    padding: 1em 1em;
-    margin: 2em 1em;
-      
-}
-a:hover
-{
-    border-top: #0065fc solid 2px;
-    color: #0065fc; 
-    padding-top: 40px;
-     
-}
+@media screen and (max-width: 640px) 
+  {
+    header 
+      {
+        grid-template-areas: "logo . inscrire" "navbar navbar navbar";
+      }
+  
+    .nav_title 
+     {
+        border-bottom: 3px solid #F2F2F2;
+        width: 500px;
+        padding:10px 0;
+      }
+    .nav_title:hover 
+      {
+        border-bottom-color: #0065FC;
+        border-top: none;
+      }
+  }
 
-/*section 1*/
+/*Section 1 Recherche*/
 
 #research
+  {
+    max-width: 1500px;
+    margin: auto;
+    padding: 0 40px;
+  }
+
+/*Rechercher*/
+
+.search 
+  {
+    display:flex;
+  }
+.search_icon 
 {
-    
+  background-color: #F2F2F2;
+  padding: 15px 25px;
+  border-radius: 15px 0 0 15px;
+  text-align: center;
 }
-.location
+.searchFormWrapiconIcon {
+  margin-left: 0.1rem;
+}
+.search_input 
 {
+  border-right: none;
+  border-left: none;
+  border-top: #F2F2F2 1px solid;
+  border-bottom: #F2F2F2 1px solid;
+  padding: 0 25px;
+  width: 200px;
+  
+}
+.searchFormSearchinput::placeholder {
+  font-family: "Raleway", "Sans serif";
+  font-size: 1rem;
+  color: #00000069;
+}
+.search_submit {
+  background-color: #0065FC;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 0 1rem 1rem 0;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.search_filters_area {
+  display: flex;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+.search_filters_title {
+  margin: 0 2rem 1rem 0;
+  display: flex;
+  align-items: center;
+}
+.search_filter_button {
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
+  border: 2px solid #d9d9d9;
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition-duration: 0.1s;
+  font-weight: bold;
+}
+.search_filter_button:last-child {
+  margin-right: 0;
+}
+.search_filter_button:hover {
+  background-color: #f3f8ff;
+  transform: scale(1.015);
+}
+.search_filter_logos {
+  background-color: #DEEBFF;
+  border-radius: 100%;
+  height: 3rem;
+  width: 3rem;
+  min-height: 3.5rem;
+  min-width: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -2px;
+}
+.searchFiltersFilterWrapiconIcon {
+  color: blue;
+}
+.search_button_title {
+  margin: 0 1rem;
+}
+.info {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0 2rem 0;
+}
+.info_text {
+  height: 2rem;
+  width: 2rem;
+  min-height: 2rem;
+  min-width: 2rem;
+  border: solid 1px #d9d9d9;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+}
+.searchResultWrapiconIcon {
+  color: #0065FC;
+}
+.info_text_smart {
+  margin: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .search {
     display: flex;
-
+    width: 100%;
+  }
+  .search_input {
+    flex: 1;
+  }
+  .search_button {
+    display: none;
+  }
+  .search_button2{
+    display:block;
+  }
+  .search_submit
+  {
+    border-radius: 15px;
+  }
+  
 }
-
-.location_logo
-{
-    width: 15px;
-    background-color: #f2f2f2;
-    border-top: 30px;
+@media screen and (max-width: 650px) {
+  h2 {
+    width: 100%;
+  }
+  .search_filter_button {
+    margin-right: 1rem;
+  }
 }
-button
-{
-    width: 150px;
-    background-color: #0065fc;
-    color: white;
-    border-radius: 8px;
-    margin-right: 10px;
+@media screen and (min-width: 601px) {
+  .search_button {
+    display: block;
+  }
+  .search_button2
+  {
+    display: none !important;
+    
+  }
+  
 }
