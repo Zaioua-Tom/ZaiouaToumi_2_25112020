@@ -5,9 +5,14 @@
   margin:0px;
   padding :0px;
   font-family: 'Raleway', Arial, sans-serif; 
-  text-decoration: none; 
+  text-decoration: none;
+  list-style: none; 
 }
 
+a
+{
+  color:black;
+}
 
 /*Header*/
 
@@ -15,16 +20,16 @@ header
 {
   display: grid;
   align-items: center;
-  max-width: 1500px;
+  max-width: 2000px;
   margin: auto;
   grid-template-columns: auto 1fr auto auto;
-  grid-template-areas: "logo . navbar inscrire"
+  grid-template-areas: "logo . navbar inscrire";
 }
 
 .website_logo
 {
   grid-area: logo;
-  padding: 0 40px;
+  padding-left:40px;
 } 
 
 .navigation
@@ -84,7 +89,7 @@ header
 
 #research
 {
-  max-width: 1500px;
+  max-width: 2000px;
   margin: auto;
   padding: 0 40px;
 }
@@ -151,7 +156,7 @@ header
   display: flex;
   align-items: center;
   margin-right: 32px;
-  border: 2px solid #d9d9d9;
+  border: 2px solid  #e4dcdc;
   border-radius: 32px;
   cursor: pointer;
   transition-duration: 0.3s;
@@ -210,11 +215,14 @@ header
   border-radius: 100%;
   margin-right: 16px;
 }
+
 .info_button_logo
 {
   color: #0065FC;
 }
-.info_text_smart {
+
+.info_text_smart 
+{
   margin: 0;
 }
 
@@ -264,27 +272,119 @@ header
 
 /*Section 2 Hébergements*/
 
+/*Lodging*/
+
 #lodging
 {
-  max-width: 1500px;
-  margin: auto;
-  padding: 0 40px;
+  max-width: 1800px;
+  margin-left:40px;
+  display: grid;
+  column-gap: 32px;
+  grid-template-columns: 6fr 3fr;
 }
 
-.lodging_header
+.lodging_city
 {
-  display: flex; 
-  justify-items: center; 
-  justify-content: space-between;
+  grid-column: 1/-1;
+  margin:0;
 }
 
 .lodging_tag_price
 {
-  background-color:#f2f2f2; 
-  width: 68%; 
-  height: 700px;
+  background-color:#f2f2f2;  
   border-radius: 20px;
   display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows:30% 1fr 1fr 30%;
+  column-gap: 32px;
+  row-gap: 32px;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 32px; 
+}
+
+.lodging_photo
+{
+  background-color: white;
+  padding: 6px;
+  border-radius: 20px;
+  box-shadow: 0 0 32px #0807072e;
+  transition-duration: 0.3s;
+  cursor: pointer;
+  box-sizing: border-box;
+  height: 100%;
+}
+.lodging_photo:hover
+{
+  transform:scale(1.2)
+}
+.lodging_photo_figure_images
+{
+  height: 130px;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+  max-width:100%;
+  max-height: 100%;
+  width: 100%;  
+}
+
+h3, .lodging-night, .lodging_stars
+{
+  margin: 0.25rem 0.75rem 0 0.75rem;
+  color:black;
+}
+
+.lodging_stars_icons
+{
+  color: #0065FC;
+}
+
+.lodging_stars_icons2
+{
+  color: #e4dcdc;
+}
+
+/*Popular lodging*/
+
+.lodging_popular
+{
+  display: grid;
+  row-gap: 32px;
+  align-items: start;
+  grid-template-rows:1fr;
+  background-color:#f2f2f2;  
+  border-radius: 20px;
+  padding:32px;
+  
+}
+ .lodging_popular_title
+{
+  display:flex;
+  justify-content: space-between;
+}
+
+.lodging_popular_content
+{
+  display: flex;
+}
+.lodging_popular_images
+{
+  height: 150px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px 0 0 0;
+}
+.lodging_popular_content2
+{
+  width: 33%;
+  max-width: 33%;
+  min-width:33%;
+}
+
+.lodging_popular_content3
+{
+  display:flex;
+  flex-direction: column;
+}
+
+.lodging_popular_content4
+{
+  flex: 1;
 }
