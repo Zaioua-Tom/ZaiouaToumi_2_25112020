@@ -187,8 +187,8 @@ header
   justify-content: center;
   background-color: #DEEBFF;
   border-radius: 100%;
-  min-height: 50px;
-  min-width: 50px;
+  height: 50px;
+  width: 50px;
   margin: -2px;
 }
 
@@ -209,11 +209,12 @@ header
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 32px;
-  min-width: 32px;
-  border: solid 1px #d9d9d9;
+  height: 25px;
+  width: 25px;
+  border: solid 1px ;
   border-radius: 100%;
   margin-right: 16px;
+  color:  #e4dcdc;
 }
 
 .info_button_logo
@@ -287,6 +288,7 @@ header
 {
   grid-column: 1/-1;
   margin:0;
+
 }
 
 .lodging_tag_price
@@ -374,8 +376,6 @@ h3, .lodging-night, .lodging_stars
 .lodging_popular_content2
 {
   width: 33%;
-  max-width: 33%;
-  min-width:33%;
 }
 
 .lodging_popular_content3
@@ -387,4 +387,30 @@ h3, .lodging-night, .lodging_stars
 .lodging_popular_content4
 {
   flex: 1;
+}
+
+/*Activites*/
+
+#activities
+{
+  height: 600px;
+	width: 1400px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	gap:32px;
+  margin: 14rem;
+} 
+
+.activites_head_title
+{
+  grid-column: 1/-1;
+}
+.activity_image
+{
+	width: 100%;
+}
+.activity1
+{
+	grid-row: 2/3;
 }
