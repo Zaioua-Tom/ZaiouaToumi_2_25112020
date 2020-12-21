@@ -20,7 +20,7 @@ header
 {
   display: grid;
   align-items: center;
-  max-width: 2000px;
+  max-width: 1500px;
   margin: auto;
   grid-template-columns: auto 1fr auto auto;
   grid-template-areas: "logo . navbar inscrire";
@@ -29,7 +29,6 @@ header
 .website_logo
 {
   grid-area: logo;
-  padding-left:40px;
 } 
 
 .navigation
@@ -60,6 +59,13 @@ header
   color: #0065FC;
   font-weight: 700; 
 }
+@media screen and (max-width: 1600px)
+{
+  .website_logo
+    {
+      padding: 40px;
+    } 
+}
 
 @media screen and (max-width: 640px) 
   {
@@ -67,7 +73,12 @@ header
     {
       grid-template-areas: "logo . inscrire" "navbar navbar navbar";
     }
-  
+
+    .website_logo
+    {
+     padding: 40px;
+    } 
+
     .nav_title 
     {
       border-bottom: 3px solid #F2F2F2;
@@ -89,7 +100,7 @@ header
 
 #research
 {
-  max-width: 2000px;
+  max-width: 1500px;
   margin: auto;
   padding: 0 40px;
 }
@@ -100,6 +111,7 @@ header
 {
   padding-bottom: 10px;
 }
+
 .search 
 {
   display:flex;
@@ -227,6 +239,28 @@ header
   margin: 0;
 }
 
+@media screen and (max-width: 1050px) 
+{
+  .search_filter_button 
+  {
+    margin:10px 16px 10px 0;
+  }
+}
+
+@media screen and (min-width:641px) and (max-width: 980px)
+{
+  .search_filters_area
+  {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+  }
+
+  .search_filters_title 
+  {
+    grid-column: 1/-1;
+  }
+  
+}
 @media screen and (max-width: 640px) 
 {
   .search 
@@ -256,13 +290,7 @@ header
     margin:10px 16px 10px 0;
   }
 }
-@media screen and (max-width: 1050px) 
-{
-  .search_filter_button 
-  {
-    margin:10px 16px 10px 0;
-  }
-}
+
 @media screen and (min-width: 601px) 
 {
   .search_button2
@@ -277,18 +305,11 @@ header
 
 #lodging
 {
-  max-width: 1800px;
-  margin-left:40px;
+  max-width: 1500px;
+  margin:auto;
   display: grid;
   column-gap: 32px;
   grid-template-columns: 6fr 3fr;
-}
-
-.lodging_city
-{
-  grid-column: 1/-1;
-  margin:0;
-
 }
 
 .lodging_tag_price
@@ -300,6 +321,12 @@ header
   row-gap: 32px;
   grid-template-columns: repeat(3, 1fr);
   padding: 32px; 
+}
+
+.lodging_city
+{
+  grid-column: 1/-1;
+  margin:0;
 }
 
 .lodging_photo
@@ -371,11 +398,11 @@ h3, .lodging-night, .lodging_stars
   height: 150px;
   width: 100%;
   object-fit: cover;
-  border-radius: 20px 0 0 0;
+  border-radius: 20px 0 0 20px;
 }
 .lodging_popular_content2
 {
-  width: 33%;
+  width: 40%;
 }
 
 .lodging_popular_content3
@@ -386,31 +413,297 @@ h3, .lodging-night, .lodging_stars
 
 .lodging_popular_content4
 {
-  flex: 1;
+  flex-grow: 1;
+}
+
+@media screen and (max-width: 1515px)
+{
+  .lodging_tag_price
+  {
+    column-gap:5px;
+  }
+}
+@media screen and (max-width: 1050px)
+{
+  #lodging
+{
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 32px;
+}
+.lodging_tag_price
+{
+  grid-row:2/3 ;
+
+}  
+.lodging_photo:hover
+{
+  transform:scale(1.1)
+}
+}  
+
+@media screen and (max-width: 640px)
+{
+  #lodging
+{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.lodging_tag_price
+{
+  grid-row:2/3 ;
+  display:flex;
+  flex-direction: column;
+  background-color: white;
+  row-gap: 15px;
+}
+.lodging_popular
+{
+  border-radius: 0px;
+  row-gap: 15px;
+  margin-bottom: 40px;
+}
+.lodging_photo:hover
+{
+  transform:scale(1.1)
+}
+
 }
 
 /*Activites*/
 
 #activities
 {
-  height: 600px;
-	width: 1400px;
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	grid-template-rows: repeat(2, 1fr);
-	gap:32px;
-  margin: 14rem;
-} 
+  max-width: 1500px;
+  margin: auto;
+}
+
+.activity
+{ 
+  display: grid;
+  column-gap: 40px;
+  row-gap: 40px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 40px 1fr 1fr;
+  padding: 40px 0 ;
+  box-sizing: border-box;
+}
 
 .activites_head_title
 {
   grid-column: 1/-1;
+  margin:0;
+
+}
+.activity_photo
+{
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 0 32px #0807072e;
+  transition-duration: 0.3s;
+  cursor: pointer;
+  box-sizing: border-box;
+  height: 100%;
+}
+.activity_photo1
+{
+	grid-row: 2/span 2;
+	grid-column: 1/2;
+}
+
+.activity_photo2
+{
+	grid-row: 2/3;
+	grid-column: 2/3;	
+}
+
+.activity_photo3
+{
+	grid-row: 2/4;
+  grid-column: 3/4;
+}
+
+.activity_photo4
+{
+	grid-row: 2/3;
+	grid-column: 4/5;
+}
+
+.activity_photo5
+{
+	grid-row: 3/4;
+	grid-column: 2/3;
+}
+
+.activity_photo6
+{
+	grid-row: 3/4;
+	grid-column: 4/5;
+}
+
+.activity_photo:hover
+{
+  transform:scale(1.2)
+}
+
+.activity_image
+{
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+  max-width:100%;
+  max-height: 100%;
+  width: 100%;  
+}
+
+.activity_image1
+{
+  height: 530px;
+}
+
+.activity_image2
+{
+  height: 200px;
+}
+
+.activity_image3
+{
+  height: 530px;
+}
+
+.activity_image4
+{
+  height: 200px;
+}
+
+.activity_image5
+{
+  height: 200px;
+}
+
+.activity_image6
+{
+  height: 200px;
+}
+
+.activity_title
+{
+  margin: 30px 0 30px 30px;
+  color:black;
+}
+@media screen and (max-width: 1515px)
+{
+.activity
+{
+  row-gap: 5px;
+  column-gap:5px;
+}
+}
+
+@media screen and (max-width: 1050px)
+{
+.activity
+{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.activity_photo1
+{
+	grid-row: 2/3;
+	grid-column: 1/2;
+}
+
+.activity_photo3
+{
+	grid-row: 2/3;
+  grid-column: 3/4;
+}
+
+.activity_photo4
+{
+	grid-row: 3/4;
+  grid-column: 1/2;
+}
+
+.activity_photo6
+{
+	grid-row: 3/4;
+  grid-column: 3/4;
+}
+.activity_image1
+{
+  height: 200px;
+}
+
+.activity_image3
+{
+  height: 200px;
+}
+}
+
+@media screen and (max-width: 640px)
+{
+  #activities
+{
+  grid-template-columns: 1fr;
+
+}
+.activity
+{ 
+  display:flex;
+  flex-direction: column;
+  width: 90%;
+  row-gap: 15px;
+  margin:0 40px;
+  padding-right: 30px;
+}
+.activity_photo
+{
+  height:auto;
 }
 .activity_image
 {
-	width: 100%;
+  height: 130px;
 }
-.activity1
+.activity_photo:hover
 {
-	grid-row: 2/3;
+  transform:scale(1.1)
+}
+
+}
+
+/*Footer*/
+
+footer
+{
+  max-width: 1850px;
+  margin: auto;
+  background-color: #f2f2f2;
+}
+
+.footer_div_container
+{
+  max-width: 1500px;
+  margin: auto;
+  display: grid;
+  grid-template-columns:repeat(3, 1fr);
+  padding-top: 20px;
+}
+
+footer ul
+{
+  padding:10px 0 10px 10px;
+  display: grid; 
+  row-gap: 10px;
+}
+
+@media screen and (max-width:640px)
+{
+  
+.footer_div_container
+{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
 }
