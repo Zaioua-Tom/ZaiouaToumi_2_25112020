@@ -28,7 +28,7 @@ header
 
 .website_logo
 {
-  grid-area: logo;
+ grid-area: logo;
 } 
 
 .navigation
@@ -59,6 +59,7 @@ header
   color: #0065FC;
   font-weight: 700; 
 }
+
 @media screen and (max-width: 1600px)
 {
   .website_logo
@@ -105,12 +106,12 @@ header
   padding: 0 40px;
 }
 
-/*Rechercher*/
-
 .found_lodging
 {
   padding-bottom: 10px;
 }
+
+/*Rechercher*/
 
 .search 
 {
@@ -180,18 +181,6 @@ header
   transform: scale(1.2);
 }
 
-.search_button_title
-{
-  color: black;
-  font-weight: bold;
-  margin: 0 16px;
-}
-
-.search_button_title:hover
-{
-  color: #0065fc;
-}
-
 .search_filter_logos 
 {
   display: flex;
@@ -204,6 +193,17 @@ header
   margin: -2px;
 }
 
+.search_button_title
+{
+  color: black;
+  font-weight: bold;
+  margin: 0 16px;
+}
+
+.search_button_title:hover
+{
+  color: #0065fc;
+}
 .search_button_logo 
 {
   color:#0065FC;
@@ -295,7 +295,7 @@ header
 {
   .search_button2
   {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -344,6 +344,7 @@ header
 {
   transform:scale(1.2)
 }
+
 .lodging_photo_figure_images
 {
   height: 130px;
@@ -393,6 +394,7 @@ h3, .lodging-night, .lodging_stars
 {
   display: flex;
 }
+
 .lodging_popular_images
 {
   height: 150px;
@@ -400,6 +402,7 @@ h3, .lodging-night, .lodging_stars
   object-fit: cover;
   border-radius: 20px 0 0 20px;
 }
+
 .lodging_popular_content2
 {
   width: 40%;

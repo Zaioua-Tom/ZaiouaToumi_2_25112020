@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="fr">
   <head>
     <meta charset="utf-8">
+    <title>Reservia</title>
     <link rel="stylesheet" type="text/css" href="style.css"> 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -14,74 +15,73 @@
   <!--Header-->
 
     <header>
-      <img class="website_logo"src="images\logo\Reservia.svg" alt="website logo"/>
+      <img class="website_logo" src="images/logo/Reservia.svg" alt="website logo"/>
       <nav class="navigation" >  
         <a class="nav_title" href="#lodging" >Hébergements</a>
         <a class="nav_title" href="#activities">Activités</a>
       </nav>
-      <a class="inscription"href="#" >S'inscrire</a>   
+      <a class="inscription" href="#">S'inscrire</a>   
     </header>
 
   <!--Section 1 Recherche-->
 
     <section id="research">
-      <h1 class="found_lodging">Trouvez votre hébergement pour des vacances de rêve</h1>
+    <h1 class="found_lodging">Trouvez votre hébergement pour des vacances de rêve</h1>
       <p>En plein centre ville ou en pleine nature </p>
       <br>
       <br>
       <!--rechercher--> 
-      <div class="location">
-        <form class="search">
-          <div class="search_icon">
-            <i class="fas fa-map-marker-alt" ></i>
-          </div>
-          <input class="search_input" type="search" placeholder="Veuillez saisir la ville">
-          <button class="search_submit">
-            <span class="search_button">Rechercher</span>
-            <i class="fas fa-search search_button2"></i>
-          </button>
-        </form>
-        <br>
-        <!--filtres--> 
-        <div class="search_filters_area">
-          <h2 class="search_filters_title">Filtres</h2>
-          <!--Economique--> 
-          <div class="search_filter_button search_filter_button1">
-            <div class="search_filter_logos">
-              <i class="fas fa-money-bill-wave search_button_logo"></i>
-            </div>
-            <a href="#" class="search_button_title">Économique</a>
-          </div>
-          <!--Familial--> 
-          <div class="search_filter_button search_filter_button2">
-            <div class="search_filter_logos">
-              <i class="fas fa-child search_button_logo"></i>
-            </div>
-            <a href="#" class="search_button_title">Familial</a>
-          </div>
-          <!--Romantique--> 
-          <div class="search_filter_button search_filter_button3">
-            <div class="search_filter_logos">
-              <i class="fas fa-heart search_button_logo"></i>
-            </div>
-            <a href="#" class="search_button_title">Romantique</a>
-          </div>
-          <!--Animaux--> 
-          <div class="search_filter_button search_filter_button4">
-            <div class="search_filter_logos">
-              <i class="fas fa-dog search_button_logo"></i>
-            </div>
-            <a href="#" class="search_button_title">Animaux autorisés</a>
-          </div>
+      <form class="search">
+        <div class="search_icon">
+          <i class="fas fa-map-marker-alt"></i>
         </div>
-        <!--Informations--> 
-        <div class="info">
-          <div class="info_text">
-            <i class="fas fa-info info_button_logo"></i>
+        <input class="search_input" type="search" placeholder="Veuillez saisir la ville">
+        <button class="search_submit">
+          <span class="search_button">Rechercher</span>
+          <i class="fas fa-search search_button2"></i>
+        </button>
+      </form>
+      <br>
+      <!--filtres--> 
+      <div class="search_filters_area">
+        <h2 class="search_filters_title">Filtres</h2>
+        <!--Economique--> 
+        <div class="search_filter_button search_filter_button1">
+          <div class="search_filter_logos">
+            <i class="fas fa-money-bill-wave search_button_logo"></i>
           </div>
-          <p class="info_text_smart">Plus de 500 logements sont disponibles dans cette ville</p>
+          <a href="#" class="search_button_title">Économique</a>
         </div>
-    </section>
+        <!--Familial--> 
+        <div class="search_filter_button search_filter_button2">
+          <div class="search_filter_logos">
+            <i class="fas fa-child search_button_logo"></i>
+          </div>
+          <a href="#" class="search_button_title">Familial</a>
+        </div>
+        <!--Romantique--> 
+        <div class="search_filter_button search_filter_button3">
+          <div class="search_filter_logos">
+            <i class="fas fa-heart search_button_logo"></i>
+          </div>
+          <a href="#" class="search_button_title">Romantique</a>
+        </div>
+        <!--Animaux--> 
+        <div class="search_filter_button search_filter_button4">
+          <div class="search_filter_logos">
+            <i class="fas fa-dog search_button_logo"></i>
+          </div>
+          <a href="#" class="search_button_title">Animaux autorisés</a>
+        </div>
+      </div>
+      <!--Informations--> 
+      <div class="info">
+        <div class="info_text">
+          <i class="fas fa-info info_button_logo"></i>
+        </div>
+        <p class="info_text_smart">Plus de 500 logements sont disponibles dans cette ville</p>
+      </div>   
+      </section>
 
   <!--Section 2 Hebergement-->
     <!--Lodging-->
@@ -95,7 +95,7 @@
             <figure class="lodging_photo_figure">
               <img 
                     class="lodging_photo_figure_images"
-                    src="images\hebergements\4_small\auberge_de_la_cannebiere.jpg"
+                    src="images/hebergements/4_small/auberge_de_la_cannebiere.jpg"
                     alt="la cannebiere"
               >
               <figcaption class="lodging_photo_figure_figcaption">
@@ -117,7 +117,7 @@
             <figure class="lodging_photo_figure">
               <img 
                 class="lodging_photo_figure_images"
-                src="images\hebergements\4_small\hotel_du_port.jpg"
+                src="images/hebergements/4_small/hotel_du_port.jpg"
                 alt="hotel du port"
               >
               <figcaption class="lodging_photo_figure_figcaption">
@@ -139,7 +139,7 @@
             <figure class="lodging_photo_figure">
               <img 
                 class="lodging_photo_figure_images"
-                src="images\hebergements\4_small\hotel_les_mouettes.jpg"
+                src="images/hebergements/4_small/hotel_les_mouettes.jpg"
                 alt="les mouettes"
               >
               <figcaption class="lodging_photo_figure_figcaption">
@@ -161,7 +161,7 @@
             <figure class="lodging_photo_figure">
               <img 
                 class="lodging_photo_figure_images"
-                src="images\hebergements\4_small\hotel_de_la_mer.jpg"
+                src="images/hebergements/4_small/hotel_de_la_mer.jpg"
                 alt="hotel de la mer"
               >
               <figcaption class="lodging_photo_figure_figcaption">
@@ -183,7 +183,7 @@
             <figure class="lodging_photo_figure">
               <img 
                 class="lodging_photo_figure_images"
-                src="images\hebergements\4_small\auberge_le_panier.jpg"
+                src="images/hebergements/4_small/auberge_le_panier.jpg"
                 alt="auberge le panier"
               >
               <figcaption class="lodging_photo_figure_figcaption">
@@ -205,7 +205,7 @@
             <figure class="lodging_photo_figure">
               <img 
                 class="lodging_photo_figure_images"
-                src="images\hebergements\4_small\chez_amina.jpg"
+                src="images/hebergements/4_small/chez_amina.jpg"
                 alt="chez amina"
               >
               <figcaption class="lodging_photo_figure_figcaption">
@@ -232,7 +232,7 @@
             <div class="lodging_popular_content2">
               <img 
                 class="lodging_popular_images"
-                src="images\hebergements\4_small\hotel_le_soleil_du_matin.jpg"
+                src="images/hebergements/4_small/hotel_le_soleil_du_matin.jpg"
                 alt="hotel le soleil du matin"
               >
             </div>
@@ -255,7 +255,7 @@
             <div class="lodging_popular_content2">
               <img 
                 class="lodging_popular_images"
-                src="images\hebergements\4_small\au_coeur_de_leau.jpg"
+                src="images/hebergements/4_small/au_coeur_de_leau.jpg"
                 alt="coeur de l'eau"
               >
             </div>
@@ -278,7 +278,7 @@
             <div class="lodging_popular_content2">
               <img 
                 class="lodging_popular_images"
-                src="images\hebergements\4_small\hotel_tout_bleu_et_blanc.jpg"
+                src="images/hebergements/4_small/hotel_tout_bleu_et_blanc.jpg"
                 alt="tout bleu"
               >
             </div>
@@ -309,7 +309,7 @@
           <figure class="activity_picture1">
             <img 
               class="activity_image activity_image1"
-              src="images\activites\3_medium\reno-laithienne-QUgJhdY5Fyk-unsplash.jpg"
+              src="images/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg"
               alt="vieux port"
             >
             <figcaption class="activity_photo_figure_figcaption">
@@ -323,7 +323,7 @@
           <figure class="activity_picture2">
             <img 
               class="activity_image activity_image2"
-              src="images\activites\4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg"
+              src="images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg"
               alt="Fort de Pomegues"
             >
             <figcaption class="activity_photo_figure_figcaption">
@@ -337,7 +337,7 @@
           <figure class="activity_picture3">
             <img 
               class="activity_image activity_image3"
-              src="images\activites\3_medium\kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg"
+              src="images/activites/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg"
               alt="parc national des calanques"
             >
             <figcaption class="activity_photo_figure_figcaption">
@@ -351,7 +351,7 @@
           <figure class="activity_picture4">
             <img 
               class="activity_image activity_image4"
-              src="images\activites\4_small\florian-wehde-xW9e8gdotxI-unsplash.jpg"
+              src="images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg"
               alt="notre dame de la garde"
             >
             <figcaption class="activity_photo_figure_figcaption">
@@ -365,7 +365,7 @@
           <figure class="activity_picture5">
             <img 
               class="activity_image activity_image5"
-              src="images\activites\4_small\kevin-hikari-rV_Qd1l-VXg-unsplash.jpg"
+              src="images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg"
               alt="iles du frioul"
             >
             <figcaption class="activity_photo_figure_figcaption">
@@ -379,7 +379,7 @@
           <figure class="activity_picture6">
             <img 
               class="activity_image activity_image6"
-              src="images\activites\4_small\lena-paulin-wH2-EJoDcV0-unsplash.jpg"
+              src="images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg"
               alt="parc longchamp"
             >
             <figcaption class="activity_photo_figure_figcaption">
