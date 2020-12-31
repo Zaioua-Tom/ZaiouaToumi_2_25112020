@@ -106,6 +106,7 @@ header
   padding: 0 40px;
 }
 
+
 .found_lodging
 {
   padding-bottom: 10px;
@@ -116,8 +117,8 @@ header
 .search 
 {
   display:flex;
+  
 }
-
 .search_icon 
 {
   background-color: #F2F2F2;
@@ -155,6 +156,7 @@ header
   display: flex;
   flex-wrap: wrap;
   margin-top: 32px;
+
 }
 
 .search_filters_title 
